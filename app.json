@@ -13,23 +13,51 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "StudyMates needs location access to find nearby study groups and show your location to other students.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "StudyMates needs location access to find nearby study groups and show your location to other students."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "StudyMates needs location access to find nearby study groups and show your location to other students.",
+          "locationAlwaysPermission": "StudyMates needs location access to find nearby study groups and show your location to other students.",
+          "locationWhenInUsePermission": "StudyMates needs location access to find nearby study groups and show your location to other students."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ffffff",
+          "sounds": ["./assets/notification-sound.wav"]
+        }
+      ]
+    ],
     "extra": {
       "eas": {
         "projectId": "ad06c864-4d9a-4191-aec7-a927e4f97508"
       }
     },
-    "owner": "huynhdle"
+    "owner": "huynhdle",
+    "scheme": "studymates"
   }
 }
