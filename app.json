@@ -24,6 +24,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ad06c864-4d9a-4191-aec7-a927e4f97508"
+      }
+    },
+    "owner": "huynhdle"
   }
 }
